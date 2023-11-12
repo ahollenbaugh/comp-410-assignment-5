@@ -13,6 +13,7 @@
 %
 % Code expectation: 1 line
 
+myFirst([H|_], H).
 
 % 2. TODO: Write a procedure named myLast that takes:
 %    1.) A list
