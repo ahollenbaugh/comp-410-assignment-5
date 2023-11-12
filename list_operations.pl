@@ -28,6 +28,9 @@ myFirst([H|_], H).
 %
 % Code expectation: ~3 lines
 
+myLast([A], A). % base case
+myLast([_|T], Result) :-
+    myLast(T, Result).
 
 % 3. TODO: Write a procedure named myInit that takes:
 %    1.) A list
