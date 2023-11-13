@@ -46,6 +46,12 @@ myLast([_|T], Result) :-
 %
 % Code expectation: ~3 lines
 
+% Once your list is reduced to the last element, return the empty
+% list. This is the only element we DON'T want to add to the
+% resulting list.
+myInit([A], []). % base case
+myInit([X | Rest], [X | Result]) :-
+    myInit(Rest, Result).
 
 % 4. TODO: Write a procedure named myAppend that takes:
 %    1.) A list
